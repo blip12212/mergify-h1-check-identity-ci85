@@ -1,0 +1,10 @@
+pull_request_rules:
+  - name: exact same-name check identity gate ci85
+    conditions:
+      - author = sqrr-h1-a-2026
+      - label = h1-check-identity-ci85
+      - check-success = @github-actions/H1_CHECK_IDENTITY_CI85
+      - "#check-failure = 0"
+    actions:
+      merge:
+        method: squash
