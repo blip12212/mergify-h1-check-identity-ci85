@@ -1,0 +1,12 @@
+name: H1 check identity success CI85
+on:
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  collision:
+    name: H1_CHECK_IDENTITY_CI85
+    runs-on: ubuntu-latest
+    steps:
+      - name: Controlled success side
+        run: 'exit 0'
