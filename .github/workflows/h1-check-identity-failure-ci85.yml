@@ -1,0 +1,13 @@
+name: H1 check identity failure CI85
+on:
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  collision:
+    name: H1_CHECK_IDENTITY_CI85
+    runs-on: ubuntu-latest
+    steps:
+      - name: Controlled failure side
+        run: 'sleep 8; exit 1'
+
